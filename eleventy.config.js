@@ -2,6 +2,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"css": "css"});
   eleventyConfig.addPassthroughCopy({"uploads": "uploads"});
   eleventyConfig.addPassthroughCopy({"src/admin": "admin"});
+  eleventyConfig.addPassthroughCopy({"vacanze": "vacanze"});
+  eleventyConfig.addPassthroughCopy({"astroepix": "astroepix"});
 
   const posts = c => c.getFilteredByGlob("content/attivita/*.md")
     .sort((a,b) => new Date(b.data.data) - new Date(a.data.data));
