@@ -18,7 +18,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Materia", name: "materia", widget: "select", options: ["Matematica", "Scienze"] }
+      - { label: "Materia", name: "materia", widget: "select", options: ["Italiano", "Matematica", "Storia", "Geografia", "Scienze", "Geometria", "Grammatica", "Storie e lettura", "Giochi"] }
       - { label: "Classe", name: "classe", widget: "select", options: ["Classe Prima", "Classe Seconda", "Classe Terza", "Classe Quarta", "Classe Quinta"] }
       - { label: "Breve descrizione", name: "descrizione", widget: "text" }
       - { label: "Data", name: "data", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
