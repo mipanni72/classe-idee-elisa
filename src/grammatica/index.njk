@@ -1,0 +1,7 @@
+---
+layout: base.njk
+title: Grammatica
+permalink: /grammatica/
+---
+<section class="page-head"><a class="back" href="/">← Torna alla Home</a><h1>✍️ Grammatica</h1><p>Regole, esercizi e attività per conoscere meglio la lingua italiana.</p></section>
+<div class="cards">{% for post in collections.grammatica %}<article class="card"><span class="tag">Grammatica</span><h3>{{ post.data.title }}</h3><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>{% else %}<div class="empty-state">Non ci sono ancora attività pubblicate in Grammatica.</div>{% endfor %}</div>
