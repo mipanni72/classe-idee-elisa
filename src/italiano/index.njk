@@ -1,0 +1,9 @@
+---
+layout: base.njk
+title: Italiano
+permalink: /italiano/
+---
+<section class="page-head"><a class="back" href="/">← Torna alla Home</a><h1>📘 Italiano</h1><p>Scrittura, comprensione, lessico e attività per giocare con le parole.</p></section>
+<div class="cards">
+{% for post in collections.italiano %}<article class="card"><span class="tag">Italiano</span><h3>{{ post.data.title }}</h3><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>{% else %}<div class="empty-state">Non ci sono ancora attività pubblicate in Italiano.</div>{% endfor %}
+</div>
