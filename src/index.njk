@@ -3,23 +3,60 @@ layout: base.njk
 title: Home
 permalink: /
 ---
-<section class="hero">
-  <span class="eyebrow">LA CLASSE DELLE IDEE</span>
-  <h1>Imparare, scoprire, creare ✨</h1>
-  <p>Uno spazio semplice dove raccogliere attività, materiali e piccole missioni per la classe.</p>
+<section class="hero-image">
+  <div><strong>La Classe delle idee della Maestra Elisa</strong>
+  Uno spazio per imparare, giocare, scoprire e divertirsi insieme.</div>
 </section>
-<section class="section">
-  <h2>📚 Esplora per materia</h2>
-  <div class="subject-grid">
-    <a class="subject-card math" href="/matematica/"><div class="subject-icon">📐</div><h3>Matematica</h3><p>Numeri, problemi, logica e attività da sperimentare.</p></a>
-    <a class="subject-card science" href="/scienze/"><div class="subject-icon">🔬</div><h3>Scienze</h3><p>Esperimenti, osservazioni, natura e curiosità scientifiche.</p></a>
+
+<section class="intro">
+  <h1>Benvenuti nella Classe delle idee! 🌈</h1>
+  <p>Questo spazio nasce per raccogliere attività, giochi, piccole sfide e progetti da utilizzare in classe o a casa. Un luogo semplice dove imparare, sperimentare e divertirsi insieme.</p>
+  <p>Le attività sono pensate per accompagnare i bambini nella scoperta, nella curiosità e nell'apprendimento, con strumenti facili da usare e sempre a portata di clic.</p>
+</section>
+
+<hr>
+
+<section id="attivita">
+  <h2 class="section-title">🧰 Cassetta delle attività</h2>
+  <div class="tool-grid">
+    <a class="tool" href="/vacanze/"><span class="icon">🎲</span><strong>Racconta le tue vacanze</strong><small>Lancia il dado e racconta un ricordo.</small></a>
+    <a class="tool" href="/astroepix/"><span class="icon">🚀</span><strong>Astro &amp; Pix</strong><small>Missioni, attività e avventure nello spazio.</small></a>
+    <a class="tool" href="/giochi/"><span class="icon">🧠</span><strong>Quiz e sfide</strong><small>Giochi, domande e attività interattive.</small></a>
+    <a class="tool" href="/italiano/"><span class="icon">✏️</span><strong>Scrittura creativa</strong><small>Idee, racconti e piccoli laboratori.</small></a>
+    <a class="tool" href="/matematica/"><span class="icon">🔢</span><strong>Giochi di matematica</strong><small>Numeri, logica e problemi da risolvere.</small></a>
+    <a class="tool" href="/scienze/"><span class="icon">🔬</span><strong>Piccoli scienziati</strong><small>Esperimenti, curiosità e osservazioni.</small></a>
   </div>
 </section>
-<section class="section">
-  <h2>✨ Ultime attività</h2>
-  <div class="cards">
-  {% for post in collections.attivita | slice(0,4) %}
-    <article class="card"><span class="tag">{{ post.data.materia }}</span><h3>{{ post.data.title }}</h3><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>
-  {% endfor %}
+
+<hr>
+
+<section id="materie">
+  <h2 class="section-title">📚 Esplora per materia</h2>
+  <div class="subjects">
+    <a class="subject" href="/italiano/">📘 Italiano</a>
+    <a class="subject" href="/matematica/">🔢 Matematica</a>
+    <a class="subject" href="/storia/">⏳ Storia</a>
+    <a class="subject" href="/geografia/">🌍 Geografia</a>
+    <a class="subject" href="/scienze/">🔬 Scienze</a>
+    <a class="subject" href="/geometria/">📐 Geometria</a>
+    <a class="subject" href="/grammatica/">✍️ Grammatica</a>
+    <a class="subject" href="/lettura/">📖 Storie e lettura</a>
+    <a class="subject" href="/giochi/">🎮 Giochi</a>
   </div>
 </section>
+
+<hr>
+
+<section id="progetti">
+  <h2 class="section-title">✨ Ultime novità</h2>
+  <div class="posts">
+    {% for post in collections.attivita %}
+      {% if loop.index <= 4 %}
+      <a class="post" href="{{ post.url }}"><span><strong>{{ post.data.title }}</strong></span><span>{{ post.data.materia }} · {{ post.data.classe }}</span></a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <a class="all-posts" href="#materie">Esplora tutte le materie →</a>
+</section>
+
+<div class="notice">💡 Le nuove attività pubblicate dall'area riservata vengono aggiunte automaticamente al sito e alla materia corretta.</div>
