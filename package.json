@@ -2,6 +2,7 @@
   "name": "classe-idee-elisa",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
