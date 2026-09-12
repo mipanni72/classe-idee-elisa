@@ -1,13 +1,15 @@
 ---
-layout: attivita.njk
-title: "Alla scoperta del Sistema Solare"
-materia: "Scienze"
-classe: "Classe Quinta"
-descrizione: "Un viaggio tra Sole, pianeti e curiosità dello spazio."
-data: "2026-09-12"
+title: Alla scoperta del Sistema Solare
+materia: Scienze
+classe: Classe Quinta
+descrizione: |-
+  Un viaggio tra Sole, pianeti e curiosità dello spazio.
+  Viaggiamo insieme.
+data: 2026-09-12
 immagine: ""
 allegato: ""
-permalink: "/attivita/sistema-solare/"
+layout: attivita.njk
+permalink: /attivita/sistema-solare/
 ---
 Il Sistema Solare è formato dal **Sole** e da tutti i corpi celesti che gli orbitano intorno.
 
