@@ -1,0 +1,12 @@
+---
+layout: src/_includes/base.njk
+---
+<article class="activity">
+<a class="back" href="/{{ materia | lower }}/">← Torna a {{ materia }}</a>
+<span class="tag">{{ materia }}</span>
+<h1>{{ title }}</h1>
+<p class="meta">{{ classe }} · {{ data }}</p>
+{% if immagine %}<img class="hero-image" src="{{ immagine }}" alt="{{ title }}">{% endif %}
+<div class="activity-body">{{ content | safe }}</div>
+{% if allegato %}<div class="download-box"><div><strong>📄 Materiale allegato</strong><p>Scarica il documento collegato a questa attività.</p></div><a class="btn" href="{{ allegato }}" download>Scarica PDF</a></div>{% endif %}
+</article>

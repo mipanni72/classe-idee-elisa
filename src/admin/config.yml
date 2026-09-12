@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: mipanni72/classe-idee-elisa
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+publish_mode: simple
+
+collections:
+  - name: "attivita"
+    label: "Attività"
+    folder: "content/attivita"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Materia", name: "materia", widget: "select", options: ["Matematica", "Scienze"] }
+      - { label: "Classe", name: "classe", widget: "select", options: ["Classe Prima", "Classe Seconda", "Classe Terza", "Classe Quarta", "Classe Quinta"] }
+      - { label: "Breve descrizione", name: "descrizione", widget: "text" }
+      - { label: "Data", name: "data", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Immagine", name: "immagine", widget: "image", required: false }
+      - { label: "PDF allegato", name: "allegato", widget: "file", required: false }
+      - { label: "Testo dell'attività", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "src/_includes/attivita.njk" }
+      - { label: "Indirizzo pagina", name: "permalink", widget: "string", hint: "Esempio: /attivita/le-frazioni/" }

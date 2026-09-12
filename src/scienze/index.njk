@@ -1,0 +1,9 @@
+---
+layout: src/_includes/base.njk
+title: Scienze
+permalink: /scienze/
+---
+<section class="page-head"><a class="back" href="/">← Torna alla Home</a><h1>🔬 Scienze</h1><p>Esperimenti, osservazioni e attività per capire meglio il mondo.</p></section>
+<div class="cards">
+{% for post in collections.scienze %}<article class="card"><span class="tag">Scienze</span><h2>{{ post.data.title }}</h2><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>{% else %}<p>Non ci sono ancora attività pubblicate.</p>{% endfor %}
+</div>

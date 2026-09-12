@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} · La Classe delle idee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">🌈 La Classe delle idee</a>
+    <nav>
+      <a href="/matematica/">📐 Matematica</a>
+      <a href="/scienze/">🔬 Scienze</a>
+    </nav>
+  </div>
+</header>
+<main class="container">{{ content | safe }}</main>
+<footer class="site-footer">La Classe delle idee della Maestra Elisa ❤️</footer>
+</body>
+</html>

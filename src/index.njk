@@ -1,0 +1,25 @@
+---
+layout: src/_includes/base.njk
+title: Home
+permalink: /
+---
+<section class="hero">
+  <span class="eyebrow">LA CLASSE DELLE IDEE</span>
+  <h1>Imparare, scoprire, creare ✨</h1>
+  <p>Uno spazio semplice dove raccogliere attività, materiali e piccole missioni per la classe.</p>
+</section>
+<section class="section">
+  <h2>📚 Esplora per materia</h2>
+  <div class="subject-grid">
+    <a class="subject-card math" href="/matematica/"><div class="subject-icon">📐</div><h3>Matematica</h3><p>Numeri, problemi, logica e attività da sperimentare.</p></a>
+    <a class="subject-card science" href="/scienze/"><div class="subject-icon">🔬</div><h3>Scienze</h3><p>Esperimenti, osservazioni, natura e curiosità scientifiche.</p></a>
+  </div>
+</section>
+<section class="section">
+  <h2>✨ Ultime attività</h2>
+  <div class="cards">
+  {% for post in collections.attivita | slice(0,4) %}
+    <article class="card"><span class="tag">{{ post.data.materia }}</span><h3>{{ post.data.title }}</h3><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>
+  {% endfor %}
+  </div>
+</section>
