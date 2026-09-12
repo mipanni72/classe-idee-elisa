@@ -1,0 +1,7 @@
+---
+layout: base.njk
+title: Giochi
+permalink: /giochi/
+---
+<section class="page-head"><a class="back" href="/">← Torna alla Home</a><h1>🎮 Giochi</h1><p>Quiz, sfide e attività interattive per imparare divertendosi.</p></section>
+<div class="cards">{% for post in collections.giochi %}<article class="card"><span class="tag">Giochi</span><h3>{{ post.data.title }}</h3><p class="meta">{{ post.data.classe }} · {{ post.data.data }}</p><p>{{ post.data.descrizione }}</p><a class="btn" href="{{ post.url }}">Apri attività</a></article>{% else %}<div class="empty-state">Non ci sono ancora attività pubblicate nei Giochi.</div>{% endfor %}</div>
