@@ -25,5 +25,5 @@ collections:
       - { label: "Immagine", name: "immagine", widget: "image", required: false }
       - { label: "PDF allegato", name: "allegato", widget: "file", required: false }
       - { label: "Testo dell'attività", name: "body", widget: "markdown" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "src/_includes/attivita.njk" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "attivita.njk" }
       - { label: "Indirizzo pagina", name: "permalink", widget: "string", hint: "Esempio: /attivita/le-frazioni/" }
