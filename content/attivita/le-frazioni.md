@@ -1,5 +1,5 @@
 ---
-layout: src/_includes/attivita.njk
+layout: attivita.njk
 title: "Le frazioni in modo semplice"
 materia: "Matematica"
 classe: "Classe Quinta"
