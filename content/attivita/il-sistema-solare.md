@@ -1,5 +1,5 @@
 ---
-layout: src/_includes/attivita.njk
+layout: attivita.njk
 title: "Alla scoperta del Sistema Solare"
 materia: "Scienze"
 classe: "Classe Quinta"
