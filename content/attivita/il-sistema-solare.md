@@ -4,8 +4,8 @@ materia: Scienze
 classe: Classe Quinta
 descrizione: Un viaggio tra Sole, pianeti e curiosità dello spazio. Viaggiamo insieme.
 data: 2026-09-12
-immagine: /uploads/img_5593.jpg
-allegato: /uploads/img_5593.jpg
+immagine: ""
+allegato: ""
 layout: attivita.njk
 permalink: /attivita/sistema-solare/
 ---
